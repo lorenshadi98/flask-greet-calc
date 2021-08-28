@@ -1,14 +1,10 @@
-
-from flask import Flask
-from flask.wrappers import Request
-from werkzeug.wrappers import request
+from flask import Flask, request
 from operations import add, sub, mult, div
-
 
 app = Flask(__name__)
 
 
-@app.route('/add')
+@app.route("/add")
 def add_operation():
     """Add a and b parameters."""
 
@@ -19,7 +15,7 @@ def add_operation():
     return str(result)
 
 
-@app.route('/sub')
+@app.route("/sub")
 def sub_operation():
     """Subtract a and b parameters."""
 
@@ -30,7 +26,7 @@ def sub_operation():
     return str(result)
 
 
-@app.route('/mult')
+@app.route("/mult")
 def mult_operation():
     """Multiply a and b parameters."""
 
@@ -41,7 +37,7 @@ def mult_operation():
     return str(result)
 
 
-@app.route('/div')
+@app.route("/div")
 def divide_operation():
     """Divide a and b parameters."""
 
